@@ -5,6 +5,698 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <style>
+
+        #timer {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#minutes, #seconds {
+  padding: 5px;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  margin: 0 5px;
+}
+
+
+
+
+/* CSS pour mettre la vidéo et l'image côte à côte */
+div#content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div#content div {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+div#content div.leftbox {
+  width: 50%;
+}
+
+div#content div.rightbox {
+  width: 50%;
+}
+ 
+
+ div#content div{
+ 	display: inline-block;
+ 	width: 50%;
+ }
+
+div#content div.leftbox{
+
+}
+
+div#content div.rightbox{
+
+}
+
+	/* index*/
+
+ /*	btn Ac*/
+
+nav.menu-nav ul li.Ac a{
+	text-decoration: none;
+	color: black;
+	background-color: white;
+	padding: 10px;
+	 border-radius: 10px;
+	 position: absolute; /* définir la position absolue */
+  top: 50px; /* distance par rapport au haut de la page */
+  left: 500px; /* distance par rapport à gauche de la page */
+
+}
+
+nav.menu-nav ul li.Ac {
+	list-style-type: none;
+	display: inline-block;
+	
+
+}
+
+nav.menu-nav ul li.Ac:hover a{
+	color: white;
+	background-color: black;
+	
+}
+
+	/*btn ba*/
+
+	nav.menu-nav ul li.Ba a{
+	text-decoration: none;
+	color: black;
+	background-color: white;
+	padding: 10px;
+	 border-radius: 10px;
+	 position: absolute; /* définir la position absolue */
+  top: 50px; /* distance par rapport au haut de la page */
+  left: 600px; /* distance par rapport à gauche de la page */
+
+}
+
+nav.menu-nav ul li.Ba {
+	list-style-type: none;
+	display: inline-block;
+	
+
+}
+
+nav.menu-nav ul li.Ba:hover a{
+	color: white;
+	background-color: black;
+}
+
+	/*btn fo*/
+
+	nav.menu-nav ul li.Fo a{
+	text-decoration: none;
+	color: black;
+	background-color: white;
+	padding: 10px;
+	 border-radius: 10px;
+	 position: absolute; /* définir la position absolue */
+  top: 50px; /* distance par rapport au haut de la page */
+  left: 720px; /* distance par rapport à gauche de la page */
+
+}
+
+nav.menu-nav ul li.Fo {
+	list-style-type: none;
+	display: inline-block;
+	
+
+}
+
+nav.menu-nav ul li.Fo:hover a{
+	color: white;
+	background-color: black;
+}
+
+/*btn f1*/
+
+
+nav.menu-nav ul li.F1 a{
+	text-decoration: none;
+	color: black;
+	background-color: white;
+	padding: 10px;
+	 border-radius: 10px;
+	 position: absolute; /* définir la position absolue */
+  top: 50px; /* distance par rapport au haut de la page */
+  left: 820px; /* distance par rapport à gauche de la page */
+
+}
+
+nav.menu-nav ul li.F1 {
+	list-style-type: none;
+	display: inline-block;
+	
+	
+
+}
+
+nav.menu-nav ul li.F1:hover a{
+	color: white;
+	background-color: black;
+}
+
+
+	/*Fin index*/
+
+	/* football */
+
+	/*btn av*/
+
+	nav.menu-nav-foot ul li.Acfo a{
+	text-decoration: none;
+	color: black;
+	background-color: rgb(0, 174, 255);
+	padding: 10px;
+	 border-radius: 10px;
+	 position: absolute; /* définir la position absolue */
+  top: 25px; /* distance par rapport au haut de la page */
+  left: 500px; /* distance par rapport à gauche de la page */
+}
+
+nav.menu-nav-foot ul li.Acfo {
+	list-style-type: none;
+	display: inline-block;
+	
+	
+
+}
+
+nav.menu-nav-foot ul li.Acfo:hover a{
+	color: rgb(0, 174, 255);
+	background-color: black;
+}
+	/*btn fo*/
+
+	nav.menu-nav-foot ul li.Fofo a{
+	text-decoration: none;
+	color: black;
+	background-color: rgb(0, 174, 255);
+	padding: 10px;
+	 border-radius: 10px;
+	 position: absolute; /* définir la position absolue */
+  top: 25px; /* distance par rapport au haut de la page */
+  left: 720px; /* distance par rapport à gauche de la page */
+}
+
+nav.menu-nav-foot ul li.Fofo {
+	list-style-type: none;
+	display: inline-block;
+	
+	
+
+}
+
+nav.menu-nav-foot ul li.Fofo:hover a{
+	color: rgb(0, 174, 255);
+	background-color: black;
+}
+	/*btn ba*/
+
+	nav.menu-nav-foot ul li.Bafo a{
+	text-decoration: none;
+	color: black;
+	background-color: rgb(0, 174, 255);
+	padding: 10px;
+	 border-radius: 10px;
+	 position: absolute; /* définir la position absolue */
+  top: 25px; /* distance par rapport au haut de la page */
+  left: 600px; /* distance par rapport à gauche de la page */
+}
+
+nav.menu-nav-foot ul li.Bafo {
+	list-style-type: none;
+	display: inline-block;
+	
+	
+
+}
+
+nav.menu-nav-foot ul li.Bafo:hover a{
+	color: rgb(0, 174, 255);
+	background-color: black;
+}
+
+/*btn f1*/
+
+
+nav.menu-nav-foot ul li.F1fo a{
+	text-decoration: none;
+	color: black;
+	background-color: rgb(0, 174, 255);
+	padding: 10px;
+	 border-radius: 10px;
+	 position: absolute; /* définir la position absolue */
+  top: 25px; /* distance par rapport au haut de la page */
+  left: 820px; /* distance par rapport à gauche de la page */
+
+}
+
+nav.menu-nav-foot ul li.F1fo {
+	list-style-type: none;
+	display: inline-block;
+	
+	
+
+}
+
+nav.menu-nav-foot ul li.F1fo:hover a{
+	color: rgb(0, 174, 255);
+	background-color: black;
+}
+
+
+
+	/*fin football */
+
+		/* basketball */
+
+		/* btn fo*/
+
+	nav.menu-nav-basketball ul li.Foba a{
+	text-decoration: none;
+	color: black;
+	background-color: orange;
+	padding: 10px;
+	 border-radius: 10px;
+	 position: absolute; /* définir la position absolue */
+  top: 25px; /* distance par rapport au haut de la page */
+  left: 720px; /* distance par rapport à gauche de la page */
+
+}
+
+nav.menu-nav-basketball ul li.Foba {
+	list-style-type: none;
+	display: inline-block;
+	
+	
+
+}
+
+nav.menu-nav-basketball ul li.Foba:hover a{
+	color: orange;
+	background-color: black;
+}
+
+	/*btn ac*/
+
+
+	nav.menu-nav-basketball ul li.Acba a{
+	text-decoration: none;
+	color: black;
+	background-color: orange;
+	padding: 10px;
+	 border-radius: 10px;
+	 position: absolute; /* définir la position absolue */
+  top: 25px; /* distance par rapport au haut de la page */
+  left: 500px; /* distance par rapport à gauche de la page */
+
+}
+
+nav.menu-nav-basketball ul li.Acba {
+	list-style-type: none;
+	display: inline-block;
+	
+	
+
+}
+
+nav.menu-nav-basketball ul li.Acba:hover a{
+	color: orange;
+	background-color: black;
+}
+
+	/*btn ba*/
+
+
+	nav.menu-nav-basketball ul li.Baba a{
+	text-decoration: none;
+	color: black;
+	background-color: orange;
+	padding: 10px;
+	 border-radius: 10px;
+	 position: absolute; /* définir la position absolue */
+  top: 25px; /* distance par rapport au haut de la page */
+  left: 600px; /* distance par rapport à gauche de la page */
+
+}
+
+nav.menu-nav-basketball ul li.Baba {
+	list-style-type: none;
+	display: inline-block;
+	
+	
+
+}
+
+nav.menu-nav-basketball ul li.Baba:hover a{
+	color: orange;
+	background-color: black;
+}
+	/*btn f1*/
+
+
+	nav.menu-nav-basketball ul li.F1ba a{
+		text-decoration: none;
+		color: black;
+		background-color: orange;
+		padding: 10px;
+		 border-radius: 10px;
+		 position: absolute; /* définir la position absolue */
+	  top: 25px; /* distance par rapport au haut de la page */
+	  left: 820px; /* distance par rapport à gauche de la page */
+	
+	}
+	
+	nav.menu-nav-basketball ul li.F1ba {
+		list-style-type: none;
+		display: inline-block;
+		
+		
+	
+	}
+	
+	nav.menu-nav-basketball ul li.F1ba:hover a{
+		color: orange;
+		background-color: black;
+	}
+
+	/*fin basketball */
+
+	/*début f1 */
+
+			/* btn fo*/
+
+			nav.menu-nav-basketball ul li.Fof1 a{
+				text-decoration: none;
+				color: black;
+				background-color: red;
+				padding: 10px;
+				 border-radius: 10px;
+				 position: absolute; /* définir la position absolue */
+			  top: 25px; /* distance par rapport au haut de la page */
+			  left: 720px; /* distance par rapport à gauche de la page */
+			
+			}
+			
+			nav.menu-nav-basketball ul li.Fof1 {
+				list-style-type: none;
+				display: inline-block;
+				
+				
+			
+			}
+			
+			nav.menu-nav-basketball ul li.Fof1:hover a{
+				color: red;
+				background-color: black;
+			}
+			
+				/*btn ac*/
+			
+			
+				nav.menu-nav-basketball ul li.Acf1 a{
+				text-decoration: none;
+				color: black;
+				background-color: red;
+				padding: 10px;
+				 border-radius: 10px;
+				 position: absolute; /* définir la position absolue */
+			  top: 25px; /* distance par rapport au haut de la page */
+			  left: 500px; /* distance par rapport à gauche de la page */
+			
+			}
+			
+			nav.menu-nav-basketball ul li.Acf1 {
+				list-style-type: none;
+				display: inline-block;
+				
+				
+			
+			}
+			
+			nav.menu-nav-basketball ul li.Acf1:hover a{
+				color: red;
+				background-color: black;
+			}
+			
+				/*btn ba*/
+			
+			
+				nav.menu-nav-basketball ul li.Baf1 a{
+				text-decoration: none;
+				color: black;
+				background-color: red;
+				padding: 10px;
+				 border-radius: 10px;
+				 position: absolute; /* définir la position absolue */
+			  top: 25px; /* distance par rapport au haut de la page */
+			  left: 600px; /* distance par rapport à gauche de la page */
+			
+			}
+			
+			nav.menu-nav-basketball ul li.Baf1 {
+				list-style-type: none;
+				display: inline-block;
+				
+				
+			
+			}
+			
+			nav.menu-nav-basketball ul li.Baf1:hover a{
+				color: red;
+				background-color: black;
+			}
+
+
+						
+				/*btn f1*/
+			
+			
+				nav.menu-nav-basketball ul li.F1f1 a{
+					text-decoration: none;
+					color: black;
+					background-color: red;
+					padding: 10px;
+					 border-radius: 10px;
+					 position: absolute; /* définir la position absolue */
+				  top: 25px; /* distance par rapport au haut de la page */
+				  left: 820px; /* distance par rapport à gauche de la page */
+				
+				}
+				
+				nav.menu-nav-basketball ul li.F1f1 {
+					list-style-type: none;
+					display: inline-block;
+					
+					
+				
+				}
+				
+				nav.menu-nav-basketball ul li.F1f1:hover a{
+					color: red;
+					background-color: black;
+				}
+			/*fin f1 */
+
+
+
+p.welcome{
+	color: red;
+	font-weight: bold; 
+		font-size: 200%;
+
+}
+
+
+
+	p.tkt{
+		color: #C604D4;
+
+	}
+body{
+	background: url() no-repeat;
+	background-size: 10%;
+}
+h1.titre{
+	font-size: 100px;
+	padding-left: 500px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: black;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  margin: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+footer {
+  background-color: black;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+.categorie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.categorie h2 {
+  margin-right: 20px;
+}
+
+.categorief1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.categorief1 h2 {
+  margin-right: 20px;
+}
+
+
+/*Minuteur*/
+
+#countdownTable {
+    text-align: center;
+    margin: auto;
+	border-radius: 10px;
+    margin-top: 25px; /* Ajustez la marge supérieure selon vos besoins */
+}
+
+table {
+    width: 25%; /* Ajustez la largeur de la table selon vos besoins */
+    margin: auto;
+	border-radius: 10px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ffffff;
+	
+}
+
+th, td {
+    padding: 15px;
+}
+
+#startDateTime {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#grandPrixLocation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#countdownTable p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#countdownTable table td {
+    font-weight: bold;
+	font-size: 24px;
+}
+
+#countdownTable table th {
+    font-weight: normal; 
+}
+
+/*test*/
+
+.column {
+    float: left;
+	
+	
+    width: 50%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+	
+    display: table;
+}
+
+#resultsTable {
+    width: 100%;
+	
+}
+
+#resultsTable th,
+
+#resultsTable td {
+    width: 50%;
+	
+    box-sizing: border-box;
+}
+
+tr:nth-child(even) {
+	background-color: #D6EEEE;
+  }
         .column {
             float: left;
             width: 50%;
