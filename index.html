@@ -1,1006 +1,145 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <title>Teste</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="animaxlogo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-
-        #timer {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  text-align: center;
-  margin-top: 20px;
-  padding: 10px;
-  border: 2px solid #333;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-#minutes, #seconds {
-  padding: 5px;
-  background-color: #f5f5f5;
-  border-radius: 3px;
-  margin: 0 5px;
-}
-
-
-
-
-/* CSS pour mettre la vidéo et l'image côte à côte */
-div#content {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-div#content div {
-  flex: 1;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-div#content div.leftbox {
-  width: 50%;
-}
-
-div#content div.rightbox {
-  width: 50%;
-}
- 
-
- div#content div{
- 	display: inline-block;
- 	width: 50%;
- }
-
-div#content div.leftbox{
-
-}
-
-div#content div.rightbox{
-
-}
-
-	/* index*/
-
- /*	btn Ac*/
-
-nav.menu-nav ul li.Ac a{
-	text-decoration: none;
-	color: black;
-	background-color: white;
-	padding: 10px;
-	 border-radius: 10px;
-	 position: absolute; /* définir la position absolue */
-  top: 50px; /* distance par rapport au haut de la page */
-  left: 500px; /* distance par rapport à gauche de la page */
-
-}
-
-nav.menu-nav ul li.Ac {
-	list-style-type: none;
-	display: inline-block;
-	
-
-}
-
-nav.menu-nav ul li.Ac:hover a{
-	color: white;
-	background-color: black;
-	
-}
-
-	/*btn ba*/
-
-	nav.menu-nav ul li.Ba a{
-	text-decoration: none;
-	color: black;
-	background-color: white;
-	padding: 10px;
-	 border-radius: 10px;
-	 position: absolute; /* définir la position absolue */
-  top: 50px; /* distance par rapport au haut de la page */
-  left: 600px; /* distance par rapport à gauche de la page */
-
-}
-
-nav.menu-nav ul li.Ba {
-	list-style-type: none;
-	display: inline-block;
-	
-
-}
-
-nav.menu-nav ul li.Ba:hover a{
-	color: white;
-	background-color: black;
-}
-
-	/*btn fo*/
-
-	nav.menu-nav ul li.Fo a{
-	text-decoration: none;
-	color: black;
-	background-color: white;
-	padding: 10px;
-	 border-radius: 10px;
-	 position: absolute; /* définir la position absolue */
-  top: 50px; /* distance par rapport au haut de la page */
-  left: 720px; /* distance par rapport à gauche de la page */
-
-}
-
-nav.menu-nav ul li.Fo {
-	list-style-type: none;
-	display: inline-block;
-	
-
-}
-
-nav.menu-nav ul li.Fo:hover a{
-	color: white;
-	background-color: black;
-}
-
-/*btn f1*/
-
-
-nav.menu-nav ul li.F1 a{
-	text-decoration: none;
-	color: black;
-	background-color: white;
-	padding: 10px;
-	 border-radius: 10px;
-	 position: absolute; /* définir la position absolue */
-  top: 50px; /* distance par rapport au haut de la page */
-  left: 820px; /* distance par rapport à gauche de la page */
-
-}
-
-nav.menu-nav ul li.F1 {
-	list-style-type: none;
-	display: inline-block;
-	
-	
-
-}
-
-nav.menu-nav ul li.F1:hover a{
-	color: white;
-	background-color: black;
-}
-
-
-	/*Fin index*/
-
-	/* football */
-
-	/*btn av*/
-
-	nav.menu-nav-foot ul li.Acfo a{
-	text-decoration: none;
-	color: black;
-	background-color: rgb(0, 174, 255);
-	padding: 10px;
-	 border-radius: 10px;
-	 position: absolute; /* définir la position absolue */
-  top: 25px; /* distance par rapport au haut de la page */
-  left: 500px; /* distance par rapport à gauche de la page */
-}
-
-nav.menu-nav-foot ul li.Acfo {
-	list-style-type: none;
-	display: inline-block;
-	
-	
-
-}
-
-nav.menu-nav-foot ul li.Acfo:hover a{
-	color: rgb(0, 174, 255);
-	background-color: black;
-}
-	/*btn fo*/
-
-	nav.menu-nav-foot ul li.Fofo a{
-	text-decoration: none;
-	color: black;
-	background-color: rgb(0, 174, 255);
-	padding: 10px;
-	 border-radius: 10px;
-	 position: absolute; /* définir la position absolue */
-  top: 25px; /* distance par rapport au haut de la page */
-  left: 720px; /* distance par rapport à gauche de la page */
-}
-
-nav.menu-nav-foot ul li.Fofo {
-	list-style-type: none;
-	display: inline-block;
-	
-	
-
-}
-
-nav.menu-nav-foot ul li.Fofo:hover a{
-	color: rgb(0, 174, 255);
-	background-color: black;
-}
-	/*btn ba*/
-
-	nav.menu-nav-foot ul li.Bafo a{
-	text-decoration: none;
-	color: black;
-	background-color: rgb(0, 174, 255);
-	padding: 10px;
-	 border-radius: 10px;
-	 position: absolute; /* définir la position absolue */
-  top: 25px; /* distance par rapport au haut de la page */
-  left: 600px; /* distance par rapport à gauche de la page */
-}
-
-nav.menu-nav-foot ul li.Bafo {
-	list-style-type: none;
-	display: inline-block;
-	
-	
-
-}
-
-nav.menu-nav-foot ul li.Bafo:hover a{
-	color: rgb(0, 174, 255);
-	background-color: black;
-}
-
-/*btn f1*/
-
-
-nav.menu-nav-foot ul li.F1fo a{
-	text-decoration: none;
-	color: black;
-	background-color: rgb(0, 174, 255);
-	padding: 10px;
-	 border-radius: 10px;
-	 position: absolute; /* définir la position absolue */
-  top: 25px; /* distance par rapport au haut de la page */
-  left: 820px; /* distance par rapport à gauche de la page */
-
-}
-
-nav.menu-nav-foot ul li.F1fo {
-	list-style-type: none;
-	display: inline-block;
-	
-	
-
-}
-
-nav.menu-nav-foot ul li.F1fo:hover a{
-	color: rgb(0, 174, 255);
-	background-color: black;
-}
-
-
-
-	/*fin football */
-
-		/* basketball */
-
-		/* btn fo*/
-
-	nav.menu-nav-basketball ul li.Foba a{
-	text-decoration: none;
-	color: black;
-	background-color: orange;
-	padding: 10px;
-	 border-radius: 10px;
-	 position: absolute; /* définir la position absolue */
-  top: 25px; /* distance par rapport au haut de la page */
-  left: 720px; /* distance par rapport à gauche de la page */
-
-}
-
-nav.menu-nav-basketball ul li.Foba {
-	list-style-type: none;
-	display: inline-block;
-	
-	
-
-}
-
-nav.menu-nav-basketball ul li.Foba:hover a{
-	color: orange;
-	background-color: black;
-}
-
-	/*btn ac*/
-
-
-	nav.menu-nav-basketball ul li.Acba a{
-	text-decoration: none;
-	color: black;
-	background-color: orange;
-	padding: 10px;
-	 border-radius: 10px;
-	 position: absolute; /* définir la position absolue */
-  top: 25px; /* distance par rapport au haut de la page */
-  left: 500px; /* distance par rapport à gauche de la page */
-
-}
-
-nav.menu-nav-basketball ul li.Acba {
-	list-style-type: none;
-	display: inline-block;
-	
-	
-
-}
-
-nav.menu-nav-basketball ul li.Acba:hover a{
-	color: orange;
-	background-color: black;
-}
-
-	/*btn ba*/
-
-
-	nav.menu-nav-basketball ul li.Baba a{
-	text-decoration: none;
-	color: black;
-	background-color: orange;
-	padding: 10px;
-	 border-radius: 10px;
-	 position: absolute; /* définir la position absolue */
-  top: 25px; /* distance par rapport au haut de la page */
-  left: 600px; /* distance par rapport à gauche de la page */
-
-}
-
-nav.menu-nav-basketball ul li.Baba {
-	list-style-type: none;
-	display: inline-block;
-	
-	
-
-}
-
-nav.menu-nav-basketball ul li.Baba:hover a{
-	color: orange;
-	background-color: black;
-}
-	/*btn f1*/
-
-
-	nav.menu-nav-basketball ul li.F1ba a{
-		text-decoration: none;
-		color: black;
-		background-color: orange;
-		padding: 10px;
-		 border-radius: 10px;
-		 position: absolute; /* définir la position absolue */
-	  top: 25px; /* distance par rapport au haut de la page */
-	  left: 820px; /* distance par rapport à gauche de la page */
-	
-	}
-	
-	nav.menu-nav-basketball ul li.F1ba {
-		list-style-type: none;
-		display: inline-block;
-		
-		
-	
-	}
-	
-	nav.menu-nav-basketball ul li.F1ba:hover a{
-		color: orange;
-		background-color: black;
-	}
-
-	/*fin basketball */
-
-	/*début f1 */
-
-			/* btn fo*/
-
-			nav.menu-nav-basketball ul li.Fof1 a{
-				text-decoration: none;
-				color: black;
-				background-color: red;
-				padding: 10px;
-				 border-radius: 10px;
-				 position: absolute; /* définir la position absolue */
-			  top: 25px; /* distance par rapport au haut de la page */
-			  left: 720px; /* distance par rapport à gauche de la page */
-			
-			}
-			
-			nav.menu-nav-basketball ul li.Fof1 {
-				list-style-type: none;
-				display: inline-block;
-				
-				
-			
-			}
-			
-			nav.menu-nav-basketball ul li.Fof1:hover a{
-				color: red;
-				background-color: black;
-			}
-			
-				/*btn ac*/
-			
-			
-				nav.menu-nav-basketball ul li.Acf1 a{
-				text-decoration: none;
-				color: black;
-				background-color: red;
-				padding: 10px;
-				 border-radius: 10px;
-				 position: absolute; /* définir la position absolue */
-			  top: 25px; /* distance par rapport au haut de la page */
-			  left: 500px; /* distance par rapport à gauche de la page */
-			
-			}
-			
-			nav.menu-nav-basketball ul li.Acf1 {
-				list-style-type: none;
-				display: inline-block;
-				
-				
-			
-			}
-			
-			nav.menu-nav-basketball ul li.Acf1:hover a{
-				color: red;
-				background-color: black;
-			}
-			
-				/*btn ba*/
-			
-			
-				nav.menu-nav-basketball ul li.Baf1 a{
-				text-decoration: none;
-				color: black;
-				background-color: red;
-				padding: 10px;
-				 border-radius: 10px;
-				 position: absolute; /* définir la position absolue */
-			  top: 25px; /* distance par rapport au haut de la page */
-			  left: 600px; /* distance par rapport à gauche de la page */
-			
-			}
-			
-			nav.menu-nav-basketball ul li.Baf1 {
-				list-style-type: none;
-				display: inline-block;
-				
-				
-			
-			}
-			
-			nav.menu-nav-basketball ul li.Baf1:hover a{
-				color: red;
-				background-color: black;
-			}
-
-
-						
-				/*btn f1*/
-			
-			
-				nav.menu-nav-basketball ul li.F1f1 a{
-					text-decoration: none;
-					color: black;
-					background-color: red;
-					padding: 10px;
-					 border-radius: 10px;
-					 position: absolute; /* définir la position absolue */
-				  top: 25px; /* distance par rapport au haut de la page */
-				  left: 820px; /* distance par rapport à gauche de la page */
-				
-				}
-				
-				nav.menu-nav-basketball ul li.F1f1 {
-					list-style-type: none;
-					display: inline-block;
-					
-					
-				
-				}
-				
-				nav.menu-nav-basketball ul li.F1f1:hover a{
-					color: red;
-					background-color: black;
-				}
-			/*fin f1 */
-
-
-
-p.welcome{
-	color: red;
-	font-weight: bold; 
-		font-size: 200%;
-
-}
-
-
-
-	p.tkt{
-		color: #C604D4;
-
-	}
-body{
-	background: url() no-repeat;
-	background-size: 10%;
-}
-h1.titre{
-	font-size: 100px;
-	padding-left: 500px;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: black;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-nav li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-main {
-  margin: 20px;
-}
-
-section {
-  margin-bottom: 20px;
-}
-
-h2 {
-  color: #333;
-}
-
-footer {
-  background-color: black;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
-.categorie {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-  border: 1px solid #ccc;
-  margin-bottom: 20px;
-}
-
-.categorie h2 {
-  margin-right: 20px;
-}
-
-.categorief1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-  border: 1px solid #ccc;
-  margin-bottom: 20px;
-}
-
-.categorief1 h2 {
-  margin-right: 20px;
-}
-
-
-/*Minuteur*/
-
-#countdownTable {
-    text-align: center;
-    margin: auto;
-	border-radius: 10px;
-    margin-top: 25px; /* Ajustez la marge supérieure selon vos besoins */
-}
-
-table {
-    width: 25%; /* Ajustez la largeur de la table selon vos besoins */
-    margin: auto;
-	border-radius: 10px;
-    border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid #ffffff;
-	
-}
-
-th, td {
-    padding: 15px;
-}
-
-#startDateTime {
-    text-align: center;
-    margin-top: 10px;
-}
-
-#grandPrixLocation {
-    text-align: center;
-    margin-top: 20px;
-}
-
-#countdownTable p {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-#countdownTable table td {
-    font-weight: bold;
-	font-size: 24px;
-}
-
-#countdownTable table th {
-    font-weight: normal; 
-}
-
-/*test*/
-
-.column {
-    float: left;
-	
-	
-    width: 50%;
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-	
-    display: table;
-}
-
-#resultsTable {
-    width: 100%;
-	
-}
-
-#resultsTable th,
-
-#resultsTable td {
-    width: 50%;
-	
-    box-sizing: border-box;
-}
-
-tr:nth-child(even) {
-	background-color: #D6EEEE;
-  }
-        .column {
-            float: left;
-            width: 50%;
-        }
-        
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        #resultsTable {
-            width: 100%;
-        }
-
-        #resultsTable th,
-        #resultsTable td {
-            width: 50%;
-            box-sizing: border-box;
-        }
-    </style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+        </style>
+    <title>Animax</title>
 </head>
-<body onload="startCountdown(); fetchAndDisplayResults(); fetchRaceList();">
+<body>
 
-    <!-- Haut de Page -->
-    <header>
-        <img src="img/f1.png" width="70">
-        <p>
-            <!-- Page de test (texte) -->
-        </p>
-    </header>
+    <div class="navbar">
 
-    <!-- Menu de Navigation -->
-    <nav class="menu-nav-basketball">
         <ul>
-            <li class="Acf1">
-                <a href="file:///D:/Cl%C3%A9e%20USB%20Enzo/Syst%C3%A8me%20Num%C3%A9rique/Mon%20Site%20-%20Copie/index.html">
-                    Accueil
-                </a>
-            </li>
-            <li class="Baf1">
-                <a href="file:///D:/Cl%C3%A9e%20USB%20Enzo/Syst%C3%A8me%20Num%C3%A9rique/Mon%20Site%20-%20Copie/Basketbal.html">
-                    Basketball
-                </a>
-            </li>
-            <li class="Fof1">
-                <a href="file:///D:/Cl%C3%A9e%20USB%20Enzo/Syst%C3%A8me%20Num%C3%A9rique/Mon%20Site%20-%20Copie/Football.html">
-                    Football
-                </a>
-            </li>
-            <li class="F1f1">
-                <a href="file:///D:/site%20groupe%20enzo/f1.html">
-                    Formula 1
-                </a>
-            </li>
+            <li> <a href="#Manga"> Manga</a></li>
+            <li> <a href="#News"> News</a></li>
+            <li> <a href="#Forum"> Forum</a></li>
+            <img src="animaxlogo.png" alt=""class="logo" style="width: 40px;">
+            <li class="logo"> <a href="#animax"> ANIMAX</a></li>
         </ul>
-    </nav>
-  
-   <!-- Tableau pour le minuteur -->
-<div id="countdownTable">
-    <h2 id="grandPrixLocation">Grand Prix</h2>
-    <p>Début de la course :</p>
-    <table>
-        <tr>
-            <th>DAYS</th>
-            <th>HRS</th>
-            
-            <th>MINS</th>
-        </tr>
-        <tr>
-            <td id="days">00</td>
-            <td id="hours">00</td>
-            <td id="mins">00</td>
+    </div>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="kakegurui.jpeg" alt="" style="width: 100%;">
+                <div class="text">GAMBLING SCHOOL</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="edens-zero.webp" alt="" style="width: 100%;">
+                <div class="text">EDENS ZERO</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="demonslayer.png" alt="" style="width: 100%;">
+                <div class="text">DEMON SLAYER</div></div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+            <a class="next" onclick="plusSlides(1)">&#10095</a>
+        </div>
+        <hr class="rounded">
+
+        <h1 class="trending">
+            | NOUVEAU
+        </h1>
+
+        <div class="row">
+            <div class="column">
+                <a href="C:\Users\user\Desktop\animax-main\edens-zero.html">
+                    <img src="edens-zero.webp" alt="Edens Zero" style = "width: 100%;">
+                  </a>
+                  
                 
-        </tr>
-    </table>
-    <div id="startDateTime"></div>
-</div>
 
-
-    <!-- Menu déroulant pour les courses -->
-    <select id="raceSelector" onchange="fetchAndDisplayResults(this.value);"></select>
-
-   <!-- Résultats de la dernière course -->
-<div id="raceResults">
-    <h2>Résultats de la dernière course</h2>
-    <div class="column">
-        <h3></h3>
-        <table id="topResultsTable">
-            <thead>
-                <tr>
-                    <th>Classement</th>
-                    <th>Pilote</th>
-                    <th>Écurie</th>
-                    <th>Statut</th> <!-- Nouvelle colonne pour le statut -->
-                </tr>
-            </thead>
-            <tbody id="topResultsList"></tbody>
-        </table>
+            
+        </div>
     </div>
-    <div class="column">
-        <h3></h3>
-        <table id="bottomResultsTable">
-            <thead>
-                <tr>
-                    <th>Classement</th>
-                    <th>Pilote</th>
-                    <th>Écurie</th>
-                    <th>Statut</th> <!-- Nouvelle colonne pour le statut -->
-                </tr>
-            </thead>
-            <tbody id="bottomResultsList"></tbody>
-        </table>
-    </div>
-</div>
+    <hr class="rounded">
+
+        <h1 class="trending">
+            | TRENDING
+        </h1>
+
+        <div class="row">
+            <div class="column">
+                <img src="edens-zero.webp" alt="" style = "width: 100%;">
+            </div>
+            <div class="column">
+                <img src="jjk.jpg" alt="" style = "width: 100%;">
+            </div>
+            <div class="column">
+                <img src="tr.jpg" alt="" style = "width: 100%;">
+            </div>
+            <div class="column">
+                <img src="sote.jpg" alt="" style = "width: 100%;">
+            </div>
+            <div class="column">
+                <img src="onepm.jpg" alt="" style = "width: 100%;">
+            </div>
+            <div class="column">
+                <img src="drS.jpg" alt="" style = "width: 100%;">
+            </div>
+            <div class="column">
+                <img src="yurionice.jpg" alt="" style = "width: 100%;">
+            </div>
+            <div class="column">
+                <img src="dragon.png" alt="" style = "width: 100%;">
+            </div>
+            <div class="column">
+                <img src="mha.png" alt="" style = "width: 100%;">
+            </div>
+            <div class="column">
+                <img src="nogamenolife.jpg" alt="" style = "width: 100%;">
+            </div>
+            <div class="column">
+                <img src="lycoris-recoil.jpg" alt="" style = "width: 100%;">
+            </div>
+            <div class="column">
+                <img src="overlord.jpg" alt="" style = "width: 100%;">
+            </div>
+        </div>
+
+        <div class="Subscribe">
+            <h1 class="A">ABOUT US</h1>
+            <h3 class="A"> Animax is a simple anime site with a lot of choices, we are completely free but with adds,
+                if you want premium benefits then <a href="">subscribe now</a>
+            </h3>
+        </div>
 
 
-    <!-- JavaScript pour le minuteur et les résultats -->
-    <script>
-        let countdownInterval;
-        const timerElement = document.getElementById("timer");
-        const grandPrixLocationElement = document.getElementById("grandPrixLocation");
-        const startDateTimeElement = document.getElementById("startDateTime");
-
-        const grandPrixDates = [
-            new Date("2023-11-19T07:00:00"),
-            new Date("2023-11-26T14:00:00"),
-        ];
-
-        const grandPrixLocations = [
-            "Las Vegas",
-            "Abou Dabi",
-        ];
-
-        let currentGrandPrix = 0;
-
-       function startCountdown() {
-    const targetDate = grandPrixDates[currentGrandPrix];
-    const targetLocation = grandPrixLocations[currentGrandPrix];
-
-    const now = new Date();
-    const currentTime = now.getTime();
-    const targetTimeMillis = targetDate.getTime();
-
-    if (currentTime >= targetTimeMillis) {
-        currentGrandPrix++;
-        if (currentGrandPrix >= grandPrixDates.length) {
-            alert("Tous les Grands Prix sont terminés.");
-            return;
-        }
-        startCountdown(); // Appel récursif pour passer au prochain Grand Prix
-    }
-
-    const remainingTimeMillis = targetTimeMillis - currentTime;
-    countdownInterval = setInterval(() => {
-        const currentTime = new Date().getTime();
-        const remainingTimeMillis = targetTimeMillis - currentTime;
-
-        if (remainingTimeMillis <= 0) {
-            clearInterval(countdownInterval);
-            startCountdown(); // Passer au prochain Grand Prix une fois terminé
-        } else {
-            const days = Math.floor(remainingTimeMillis / 86400000);
-            const hours = Math.floor((remainingTimeMillis % 86400000) / 3600000);
-            const minutes = Math.floor((remainingTimeMillis % 3600000) / 60000);
-            const seconds = Math.floor((remainingTimeMillis % 60000) / 1000);
-
-            // Mettre à jour le tableau
-            const daysElement = document.getElementById("days");
-            const hoursElement = document.getElementById("hours");
-            const minutesElement = document.getElementById("mins");
-
-            daysElement.textContent = days;
-            hoursElement.textContent = hours;
-            minutesElement.textContent = minutes;
-
-            const targetYear = targetDate.getFullYear();
-            const targetMonth = targetDate.getMonth();
-            const targetDay = targetDate.getDate();
-            const targetHour = targetDate.getHours();
-            const targetMinute = targetDate.getMinutes();
-            startDateTimeElement.textContent = `Heure de début : ${targetDay}/${targetMonth + 1}/${targetYear} - ${targetHour}:${targetMinute}`;
-            grandPrixLocationElement.textContent = `Grand Prix à : ${targetLocation}`;
-        }
-    }, 1000);
-}
 
 
-        function fetchRaceList() {
-            fetch('http://ergast.com/api/f1/current.json')
-                .then(response => response.json())
-                .then(data => {
-                    const raceSelector = document.getElementById('raceSelector');
-                    raceSelector.innerHTML = "";
-    
-                    data.MRData.RaceTable.Races.forEach(race => {
-                        const option = document.createElement('option');
-                        option.value = race.round;
-                        option.text = race.raceName;
-                        raceSelector.add(option);
-                    });
-                })
-                .catch(error => console.error('Erreur lors de la récupération de la liste des courses :', error));
-        }
-        
-        function fetchRaceList() {
-            fetch('http://ergast.com/api/f1/current.json')
-                .then(response => response.json())
-                .then(data => {
-                    const raceSelector = document.getElementById('raceSelector');
-                    raceSelector.innerHTML = "";
-    
-                    let lastRaceIndex = -1;
-                    // Ajouter les options dans le menu déroulant
-                    data.MRData.RaceTable.Races.forEach((race, index) => {
-                        const option = document.createElement('option');
-                        option.value = race.round;
-                        option.text = race.raceName;
-                        raceSelector.add(option);
-
-                        // Vérifier si le Grand Prix a eu lieu (a une date passée)
-                        const raceDate = new Date(race.date + "T" + race.time);
-                        if (raceDate.getTime() < Date.now()) {
-                            lastRaceIndex = index;
-                        }
-                    });
-
-                    // Sélectionner automatiquement le dernier Grand Prix avec des résultats
-                    if (lastRaceIndex !== -1) {
-                        raceSelector.selectedIndex = lastRaceIndex;
-                        // Afficher les résultats du dernier Grand Prix avec des résultats
-                        fetchAndDisplayResults(raceSelector.value);
-                    } else {
-                        // Aucun Grand Prix avec des résultats
-                        alert("Aucun Grand Prix avec des résultats n'a été trouvé.");
-                    }
-                })
-                .catch(error => console.error('Erreur lors de la récupération de la liste des courses :', error));
-        }
-
-        function fetchAndDisplayResults(round) {
-    const apiUrl = `http://ergast.com/api/f1/2023/${round}/results.json`;
-
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            const topResultsTable = document.getElementById('topResultsTable');
-            const bottomResultsTable = document.getElementById('bottomResultsTable');
-            const topResultsList = document.getElementById('topResultsList');
-            const bottomResultsList = document.getElementById('bottomResultsList');
-            topResultsList.innerHTML = "";
-            bottomResultsList.innerHTML = "";
-
-            const race = data.MRData.RaceTable.Races[0];
-
-            if (race && race.Results && race.Results.length > 0) {
-                race.Results.forEach((result, index) => {
-                    const row = index < 10 ? topResultsList.insertRow() : bottomResultsList.insertRow();
-                    const cellRank = row.insertCell(0);
-                    const cellDriver = row.insertCell(1);
-                    const cellConstructor = row.insertCell(2);
-                    const cellStatus = row.insertCell(3);
-
-                    cellRank.textContent = index + 1;
-                    cellDriver.textContent = `${result.Driver.givenName} ${result.Driver.familyName}`;
-                    cellConstructor.textContent = result.Constructor.name;
-                    cellStatus.textContent = result.status;
-                });
-            } else {
-                // Aucun classement disponible
-                const messageRow = topResultsList.insertRow();
-                const messageCell = messageRow.insertCell(0);
-                messageCell.colSpan = 4;
-                messageCell.textContent = "Ce Grand Prix n'a pas encore commencé";
+        <script>
+            let slideIndex = 1;
+          showSlides(slideIndex);
+          
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+           
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
             }
-
-            // Append the tables to the resultsTable div
-            topResultsTable.appendChild(topResultsList);
-            bottomResultsTable.appendChild(bottomResultsList);
-        })
-        .catch(error => console.error('Erreur lors de la récupération des résultats :', error));
-}
-
+           
+            slides[slideIndex-1].style.display = "block";  
+          }
+          
     </script>
-    
-    
-    
-    
-    
-    
 
-    
 
-        <!-- Clearfix pour éviter les problèmes de mise en page -->
-        <div class="clearfix"></div>
-    </div>
-
-    <!-- Pied de Page -->
-    <footer>
-        <p>
-            2022-2023 - All Right Reserved
-        </p>
-    </footer>
-    
+   
 </body>
 </html>
