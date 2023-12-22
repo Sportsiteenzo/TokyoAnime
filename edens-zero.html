@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="animaxlogo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+       .dropdown-container {
+    margin: 20px 0 20px 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff; /* Texte en blanc */
+}
+
+#episode-select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    margin-bottom: 20px;
+    background-color: #000; /* Fond noir */
+    color: #fff; /* Texte en blanc */
+    font-family: 'Rubik', sans-serif; /* Police Rubik */
+}
+
+/* Styles pour les options du menu déroulant */
+#episode-select option {
+    background-color: #000; /* Fond noir */
+    color: #fff; /* Texte en blanc */
+}
+.widget {
+    margin: 20px 40px 20px auto;  /* Ajoute une marge de 20px en haut et en bas, et centre horizontalement */
+    padding: 20px;
+    border: 1px ;
+    border-radius: 8px;
+    display: none;
+    text-align: center;
+}
+
+
+        </style>
+    <title>Animax</title>
+</head>
+<body>
+
+    <div class="navbar">
+
+        <ul>
+            <li> <a href="#Manga"> Manga</a></li>
+            <li> <a href="#News"> News</a></li>
+            <li> <a href="#Forum"> Forum</a></li>
+            <img src="animaxlogo.png" alt=""class="logo" style="width: 40px;">
+            <li class="logo"> <a href="C:\Users\user\Desktop\animax-main\index.html"> ANIMAX</a></li>
+        </ul>
+    
+        <hr class="rounded">
+
+       
+
+        
+          <script>
+            function changeEpisode() {
+              var select = document.getElementById("episode-select");
+              var selectedEpisode = select.options[select.selectedIndex].value;
+        
+              // Cache tous les widgets
+              var allWidgets = document.querySelectorAll("#widget-container > div");
+              allWidgets.forEach(function (widget) {
+                widget.style.display = "none";
+              });
+        
+              // Affiche le widget associé à l'épisode sélectionné
+              var selectedWidget = document.getElementById(selectedEpisode);
+              selectedWidget.style.display = "block";
+        
+              // Récupère la position de lecture depuis le stockage local
+              var storedPosition = localStorage.getItem(selectedEpisode + "_position");
+              if (storedPosition) {
+                // Applique la position de lecture à la vidéo
+                var videoElement = selectedWidget.querySelector("iframe");
+                videoElement.src = videoElement.src + "#t=" + storedPosition;
+              }
+            }
+        
+            // Enregistre la position de lecture lorsque la vidéo est mise en pause
+            function savePosition(episodeId) {
+              var videoElement = document.getElementById("video" + episodeId);
+              var currentPosition = videoElement.currentTime;
+              localStorage.setItem(episodeId + "_position", currentPosition);
+            }
+        
+            // Appeler la fonction changeEpisode() pour afficher le premier épisode au chargement
+            window.onload = function () {
+              changeEpisode();
+            };
+        
+            // Ajoute un gestionnaire d'événements pour enregistrer la position lors de la mise en pause de la vidéo
+            document.addEventListener("visibilitychange", function () {
+              if (document.visibilityState === "hidden") {
+                var select = document.getElementById("episode-select");
+                var selectedEpisode = select.options[select.selectedIndex].value;
+                savePosition(selectedEpisode);
+              }
+            });
+          </script>
+   
+
+        <h1 class="trending">
+            | Edens Zero Saison 1
+        </h1>
+
+        <div class="row">
+            <div class="column">
+                <a href="">
+                    <img src="edens-zero.webp" alt="Edens Zero Saison 1" style = "width: 100%;">
+                  </a>
+                  
+                
+
+            
+        </div>
+    </div>
+    <hr class="rounded">
+
+    <div class="dropdown-container">
+        <label for="episode-select">Sélectionnez un épisode:</label>
+        <select id="episode-select" onchange="changeEpisode()">
+          <option value="episode1">Épisode 1</option>
+          <option value="episode2">Épisode 2</option>
+          <option value="episode3">Épisode 3</option>
+          <option value="episode4">Épisode 4</option>
+          <option value="episode5">Épisode 5</option>
+          <!-- Ajoutez d'autres épisodes au besoin -->
+        </select>
+      </div>
+    
+  
+        <div id="widget-container">
+            <div id="episode1" class="widget" style="display: none;">
+                
+                <iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=4810944" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            </div>
+            
+        <div id="episode2" class="widget" style="display: none;">
+         
+            <iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=4810946" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+        
+        <div id="episode3" class="widget" style="display: none;">
+         
+            <iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=4810947" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+
+        <div id="episode4" class="widget" style="display: none;">
+         
+            <iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=4810951" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+
+        <div id="episode5" class="widget" style="display: none;">
+         
+            <iframe width="640" height="384" src="https://video.sibnet.ru/shell.php?videoid=4810953" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+        <!-- Ajoutez d'autres widgets au besoin -->
+      </div>
+
+        
+
+
+
+
+        <script>
+            let slideIndex = 1;
+          showSlides(slideIndex);
+          
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+           
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+           
+            slides[slideIndex-1].style.display = "block";  
+          }
+          
+    </script>
+
+
+   
+</body>
+</html>
