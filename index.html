@@ -314,50 +314,37 @@ nav a:hover {
 
         <script>
 
-                       // Variable pour le numéro de la diapositive actuelle
+                      // Variable pour le numéro de la diapositive actuelle
 let slideIndex = 0;
 
-// Fonction pour avancer les diapositives
-function plusSlides(n) {
-    showSlides((slideIndex += n));
-}
-
-// Fonction pour afficher une diapositive spécifique
-function currentSlide(n) {
-    showSlides((slideIndex = n));
-}
-
 // Fonction pour afficher les diapositives
-function showSlides(n) {
+function showSlides() {
     let i;
     let slides = document.getElementsByClassName("mySlides");
-
-    // Réinitialiser le numéro de la diapositive si on atteint la fin
-    if (n >= slides.length) {
-        slideIndex = 0;
-    }
-
-    // Réinitialiser le numéro de la diapositive si on atteint le début
-    if (n < 0) {
-        slideIndex = slides.length - 1;
-    }
 
     // Masquer toutes les diapositives
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
 
+    // Avancer le numéro de la diapositive
+    slideIndex++;
+
+    // Réinitialiser le numéro de la diapositive si on atteint la fin
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+
     // Afficher la diapositive actuelle
     slides[slideIndex].style.display = "block";
+
+    // Appeler la fonction récursivement après un délai (par exemple, 3 secondes)
+    setTimeout(showSlides, 3000);
 }
 
-// Définir l'intervalle pour changer automatiquement les diapositives toutes les X secondes (par exemple, 3 secondes)
-setInterval(function () {
-    plusSlides(1);
-}, 3000);
+// Appeler showSlides pour démarrer le diaporama au chargement de la page
+showSlides();
 
-// Appeler showSlides pour afficher la première diapositive au chargement de la page
-showSlides(slideIndex);
 
 
             
