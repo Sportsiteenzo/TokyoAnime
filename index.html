@@ -230,8 +230,8 @@ nav a:hover {
     <div class="navbar">
 
         <ul>
-            <li> <a href="#Manga"> Manga</a></li>
-            <li> <a href="#News"> News</a></li>
+            <li> <a href="#Manga"> Animé</a></li>
+            <li> <a href="#News"> Série</a></li>
             <li> <a href="#Forum"> Forum</a></li>
             <img src="tokyoanime.jpg" alt=""class="logo" style="width: 40px;">
             <li class="logo"> <a href="https://TokyoAnim.github.io/TokyoAnime/"> TokyoAnime</a></li>
@@ -248,6 +248,11 @@ nav a:hover {
             <div class="mySlides fade">
                 <img src="vinland-saga.webp" alt="" style="width: 100%;">
                 <div class="text">VINLAND SAGA</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="loki.jpeg" alt="" style="width: 100%;">
+                <div class="text">LOKI SAISON 1</div>
             </div>
             
             <a class="prev" onclick="plusSlides(-1)">&#10094</a>
@@ -271,6 +276,11 @@ nav a:hover {
                     <img src="vinland-saga.webp" alt="Vinland Saga" style="width: 100%;">
                 </a>
             </div>
+            <div class="column">
+                <a href="https://TokyoAnim.github.io/TokyoAnime/">
+                    <img src="loki.jpeg" alt="Loki" style="width: 100%;">
+                </a>
+            
             <!-- Ajoutez d'autres colonnes au besoin -->
         </div>
                   
@@ -303,6 +313,51 @@ nav a:hover {
 
 
         <script>
+
+                        // Variable pour le numéro de la diapositive actuelle
+let slideIndex = 1;
+
+// Fonction pour avancer ou reculer les diapositives
+function plusSlides(n) {
+    showSlides((slideIndex += n));
+}
+
+// Fonction pour afficher une diapositive spécifique
+function currentSlide(n) {
+    showSlides((slideIndex = n));
+}
+
+// Fonction pour afficher les diapositives
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+
+    // Si le numéro de la diapositive est supérieur au nombre total de diapositives, revenir à la première diapositive
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+
+    // Si le numéro de la diapositive est inférieur à 1, passer à la dernière diapositive
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+
+    // Masquer toutes les diapositives
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    // Afficher la diapositive actuelle
+    slides[slideIndex - 1].style.display = "block";
+}
+
+// Définir l'intervalle pour changer automatiquement les diapositives toutes les X secondes (par exemple, 3 secondes)
+setInterval(function () {
+    plusSlides(1);
+}, 3000);
+
+
+            
             let slideIndex = 1;
           showSlides(slideIndex);
           
