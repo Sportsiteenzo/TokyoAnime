@@ -314,10 +314,10 @@ nav a:hover {
 
         <script>
 
-                        // Variable pour le numéro de la diapositive actuelle
-let slideIndex = 1;
+                       // Variable pour le numéro de la diapositive actuelle
+let slideIndex = 0;
 
-// Fonction pour avancer ou reculer les diapositives
+// Fonction pour avancer les diapositives
 function plusSlides(n) {
     showSlides((slideIndex += n));
 }
@@ -332,14 +332,14 @@ function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("mySlides");
 
-    // Si le numéro de la diapositive est supérieur au nombre total de diapositives, revenir à la première diapositive
-    if (n > slides.length) {
-        slideIndex = 1;
+    // Réinitialiser le numéro de la diapositive si on atteint la fin
+    if (n >= slides.length) {
+        slideIndex = 0;
     }
 
-    // Si le numéro de la diapositive est inférieur à 1, passer à la dernière diapositive
-    if (n < 1) {
-        slideIndex = slides.length;
+    // Réinitialiser le numéro de la diapositive si on atteint le début
+    if (n < 0) {
+        slideIndex = slides.length - 1;
     }
 
     // Masquer toutes les diapositives
@@ -348,13 +348,16 @@ function showSlides(n) {
     }
 
     // Afficher la diapositive actuelle
-    slides[slideIndex - 1].style.display = "block";
+    slides[slideIndex].style.display = "block";
 }
 
 // Définir l'intervalle pour changer automatiquement les diapositives toutes les X secondes (par exemple, 3 secondes)
 setInterval(function () {
     plusSlides(1);
 }, 3000);
+
+// Appeler showSlides pour afficher la première diapositive au chargement de la page
+showSlides(slideIndex);
 
 
             
