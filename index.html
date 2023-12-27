@@ -376,6 +376,45 @@ nav a:hover {
     // Fermez la boîte modale après le traitement réussi
     closeModal('signupModal');
   }
+
+function submitLogin() {
+  // Ajoutez ici le code pour traiter la connexion avec Firebase
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // L'utilisateur est connecté avec succès
+      console.log("Connexion réussie", userCredential.user);
+      closeModal('loginModal');
+    })
+    .catch((error) => {
+      // Gestion des erreurs de connexion
+      console.error("Erreur de connexion", error);
+      // Ajoutez du code pour afficher un message d'erreur à l'utilisateur
+    });
+}
+
+function submitSignup() {
+  // Ajoutez ici le code pour traiter l'inscription avec Firebase
+  const email = document.getElementById('signupEmail').value;
+  const password = document.getElementById('signupPassword').value;
+
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // L'utilisateur est inscrit avec succès
+      console.log("Inscription réussie", userCredential.user);
+      closeModal('signupModal');
+    })
+    .catch((error) => {
+      // Gestion des erreurs d'inscription
+      console.error("Erreur d'inscription", error);
+      // Ajoutez du code pour afficher un message d'erreur à l'utilisateur
+    });
+}
+
+
+            
 </script>
 
 
