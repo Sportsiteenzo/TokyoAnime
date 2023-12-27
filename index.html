@@ -266,9 +266,11 @@ nav a:hover {
     <div class="navbar">
 
         <ul>
+            
             <!-- Ajoutez ces lignes à votre liste d'éléments de navigation -->
-            <li id="loginBtn"> <a href="#"> Connexion</a></li>
-            <li id="signupBtn"> <a href="#"> Inscription</a></li>
+<li id="loginBtn"> <a href="#" onclick="openModal('loginModal')"> Connexion</a></li>
+<li id="signupBtn"> <a href="#" onclick="openModal('signupModal')"> Inscription</a></li>
+
 
             <li> <a href="#Manga"> Animé</a></li>
             <li> <a href="#News"> Série</a></li>
@@ -351,6 +353,12 @@ nav a:hover {
 
 
         <script>
+function openModal(modalId) {
+  var modal = document.getElementById(modalId);
+  modal.style.display = "block";
+}
+
+            
   // Fonction pour afficher la boîte modale
   function openModal(modalId) {
     document.getElementById(modalId).style.display = "block";
