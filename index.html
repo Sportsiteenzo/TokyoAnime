@@ -278,9 +278,7 @@ transform: scale(1.5);
 
         <ul>
             
-            <!-- Ajoutez ces lignes à votre liste d'éléments de navigation -->
-<li id="loginBtn"> <a href="#" onclick="openModal('loginModal')"> Connexion</a></li>
-<li id="signupBtn"> <a href="#" onclick="openModal('signupModal')"> Inscription</a></li>
+        
 
 
             <li> <a href="#Manga"> Animé</a></li>
@@ -363,42 +361,7 @@ transform: scale(1.5);
 </div>
 
 
-<!-- Boîte modale pour la connexion -->
-<div id="loginModal" class="modal">
-  <div class="modal-content">
-      <span class="close" onclick="closeModal('loginModal')">&times;</span>
-      <h2>Connexion</h2>
-      <form>
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email">
-  
-          <label for="password">Mot de passe:</label>
-          <input type="password" id="password" name="password">
-  
-          <button type="button" onclick="submitLogin()">Connexion</button>
-      </form>
-  </div>
-</div>
 
-<!-- Boîte modale pour l'inscription -->
-<div id="signupModal" class="modal">
-  <div class="modal-content">
-      <span class="close" onclick="closeModal('signupModal')">&times;</span>
-      <h2>Inscription</h2>
-      <form id="signupForm">
-          <!-- Ajoutez les champs de saisie pour le nom d'utilisateur, l'e-mail et le mot de passe -->
-          <label for="signupUsername">Nom d'utilisateur:</label>
-          <input type="text" id="signupUsername" name="signupUsername">
-  
-          <label for="signupEmail">E-mail:</label>
-          <input type="email" id="signupEmail" name="signupEmail">
-  
-          <label for="signupPassword">Mot de passe:</label>
-          <input type="password" id="signupPassword" name="signupPassword">
-  
-          <!-- Ajoutez le bouton pour soumettre le formulaire d'inscription -->
-          <button type="button" onclick="submitSignup()">Inscription</button>
-      </form>
   </div>
 </div>
 
@@ -408,63 +371,6 @@ transform: scale(1.5);
 
         <script>
 
-
-// Fonction pour ouvrir une boîte modale
-function openModal(modalId) {
-  const modal = document.getElementById(modalId);
-  if (modal) {
-    modal.style.display = 'block';
-  }
-}
-
-// Fonction pour fermer une boîte modale
-function closeModal(modalId) {
-  const modal = document.getElementById(modalId);
-  if (modal) {
-    modal.style.display = 'none';
-  }
-}
-
-// Fermer la boîte modale si l'utilisateur clique en dehors de celle-ci
-window.onclick = function(event) {
-  const modals = document.getElementsByClassName('modal');
-  for (const modal of modals) {
-    if (event.target === modal) {
-      modal.style.display = 'none';
-    }
-  }
-}
-
-
-                     
-// Fonction pour traiter le formulaire d'inscription
-function submitSignup() {
-  // Récupérer les valeurs des champs username, email et password
-  const username = document.getElementById('signupUsername').value;
-  const email = document.getElementById('signupEmail').value;
-  const password = document.getElementById('signupPassword').value;
-
-  // Envoyer les données au serveur PHP
-  const formData = new FormData();
-  formData.append('username', username);
-  formData.append('email', email);
-  formData.append('password', password);
-
-  fetch('signup.php', {
-    method: 'POST',
-    body: formData
-  })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-      // Ajoutez ici la gestion de la réponse (par exemple, afficher un message à l'utilisateur)
-      closeModal('signupModal');
-    })
-    .catch(error => {
-      console.error('Erreur d\'inscription', error);
-      // Ajouter du code pour afficher un message d'erreur à l'utilisateur
-    });
-}
 
 
             
