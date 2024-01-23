@@ -416,28 +416,17 @@ body {
                 <!-- Troisième diapositive -->
                 <div class="slide">
                     <!-- Image de la troisième diapositive -->
-                    <img src="https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    <img src="edens-zero.webp"
                         alt="Image 3">
-                </div>
-                <!-- Quatrième diapositive -->
-                <div class="slide">
-                    <!-- Image de la quatrième diapositive -->
-                    <img src="https://images.pexels.com/photos/2739013/pexels-photo-2739013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                        alt="Image 4">
-                </div>
-                <!-- Cinquième diapositive -->
-                <div class="slide">
-                    <!-- Image de la cinquième diapositive -->
-                    <img src="https://images.pexels.com/photos/3555161/pexels-photo-3555161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                        alt="Image 5">
-                </div>
+               
+                
             </div>
             <!-- Conteneur pour les boutons de navigation -->
             <div class="carousel-controls">
                 <!-- Bouton pour passer à la diapositive précédente -->
-                <button id="prev">Précédent</button>
+                <a class="prev" onclick="plusSlides(-1)">&#10094</a>
                 <!-- Bouton pour passer à la diapositive suivante -->
-                <button id="next">Suivant</button>
+                <a class="next" onclick="plusSlides(1)">&#10095</a> </div>
             </div>
             <!-- Conteneur pour les points de navigation -->
             <div class="carousel-dots"></div>
@@ -511,7 +500,7 @@ body {
     // Cela implique une meilleure gestion des erreurs et une syntaxe plus stricte pour le code
     "use stict"
     // Déclare la constante pour la durée de chaque slide
-    const slideTimeout = 2000;
+    const slideTimeout = 3500;
     // Récupère les boutons de navigation
     const prev = document.querySelector('#prev');
     const next = document.querySelector('#next');
