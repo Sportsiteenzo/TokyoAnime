@@ -546,10 +546,7 @@ body {
     $slides.forEach($elt => {
         let startX;
         let endX;
-        // Efface l'intervalle d'affichage des slides lorsque la souris passe sur un slide
-        $elt.addEventListener('mouseover', () => {
-            clearInterval(intervalId);
-        }, false)
+       
         // Réinitialise l'intervalle d'affichage des slides lorsque la souris sort d'un slide
         $elt.addEventListener('mouseout', () => {
             intervalId = setInterval(showSlide, slideTimeout);
