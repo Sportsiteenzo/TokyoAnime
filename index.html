@@ -318,6 +318,7 @@ body {
 }
 /* Définition des boutons de contrôle du carousel */
 .carousel-controls {
+       visibility: hidden;
     position: absolute;
     /* Les boutons sont absolument positionnés */
     z-index: 5;
@@ -423,7 +424,10 @@ body {
             </div>
             <!-- Conteneur pour les boutons de navigation -->
             <div class="carousel-controls">
-           
+                <!-- Bouton pour passer à la diapositive précédente -->
+               <button id="prev"></button>
+                <!-- Bouton pour passer à la diapositive suivante -->
+                <button id="next"></button>
             </div>
             <!-- Conteneur pour les points de navigation -->
             <div class="carousel-dots"></div>
