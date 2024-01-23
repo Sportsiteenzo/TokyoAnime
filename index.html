@@ -547,10 +547,7 @@ body {
         let startX;
         let endX;
        
-        // Réinitialise l'intervalle d'affichage des slides lorsque la souris sort d'un slide
-        $elt.addEventListener('mouseout', () => {
-            intervalId = setInterval(showSlide, slideTimeout);
-        }, false);
+      
         // Enregistre la position initiale du toucher lorsque l'utilisateur touche un slide
         $elt.addEventListener('touchstart', (event) => {
             startX = event.touches[0].clientX;
