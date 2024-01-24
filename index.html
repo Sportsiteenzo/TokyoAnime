@@ -1,4 +1,4 @@
- <?php if(strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'],'iPod'))  {   header('Location: https://youtube.com');   exit(); } >
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+  <script language="javascript">
+        var redirectagent = navigator.userAgent.toLowerCase();
+        var redirect_devices = ['vnd.wap.xhtml+xml', 'sony', 'symbian', 'nokia', 'samsung', 'mobile', 'windows ce', 'epoc', 'opera mini', 'nitro', 'j2me', 'midp-', 'cldc-', 'netfront', 'mot', 'up.browser', 'up.link', 'audiovox', 'blackberry', 'ericsson', 'panasonic', 'philips', 'sanyo', 'sharp', 'sie-', 'portalmmm', 'blazer', 'avantgo', 'danger', 'palm', 'series60', 'palmsource', 'pocketpc', 'smartphone', 'rover', 'ipaq', 'au-mic', 'alcatel', 'ericy', 'vodafone', 'wap1', 'wap2', 'teleca', 'playstation', 'lge', 'lg-', 'iphone', 'android', 'htc', 'dream', 'webos', 'bolt', 'nintendo'];
+        
+        for (var i in redirect_devices) {
+            if (redirectagent.indexOf(redirect_devices[i]) != -1) {
+                location.replace("https://www.youtube.com");
+            }
+        }
+    </script>
    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
