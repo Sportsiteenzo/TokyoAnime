@@ -388,11 +388,57 @@ body {
     /* Border de 10px pour les points inactifs */
     border: 10px solid #2596be;
 }
-        </style>
+      
+    
+    /* Style du popup */
+#popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.popup-content {
+    display: flex;
+}
+
+.popup-image {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.popup-text {
+    flex: 1;
+}
+
+/* Ajoutez d'autres styles au besoin */
+
+    
+    </style>
     <title>TokyoAnime</title>
 </head>
 <body>
 
+ <!-- Popup -->
+    <div id="popup-container">
+        <div class="popup-content">
+            <img src="image_tokyokanime.png" alt="TokyoAnime" class="popup-image">
+            <div class="popup-text">
+                <h2>Bienvenue sur TokyoAnime sur téléphone !</h2>
+                <p>Découvrez notre contenu exceptionnel directement sur votre appareil mobile.</p>
+            </div>
+        </div>
+        <button onclick="closePopup()">Fermer</button>
+    </div>
+
+    <script src="popup.js"></script>
+    
     <div class="navbar">
 
         <ul>
@@ -502,6 +548,24 @@ body {
 
 
         <script>
+
+            // Fonction pour afficher le popup
+function showPopup() {
+    var popup = document.getElementById('popup-container');
+    popup.style.display = 'block';
+}
+
+// Fonction pour fermer le popup
+function closePopup() {
+    var popup = document.getElementById('popup-container');
+    popup.style.display = 'none';
+}
+
+// Afficher le popup au chargement de la page
+document.addEventListener('DOMContentLoaded', function () {
+    showPopup();
+});
+
 
 // Ceci est une fonction auto - exécutable.Les fonctions auto - exécutables
 // sont des fonctions qui s'exécutent immédiatement après leur déclaration,
